@@ -17,7 +17,7 @@ class ArticleView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-                "News", style: GoogleFonts.merriweather(color: Colors.white70)),
+                "Akhbark", style: GoogleFonts.merriweather(color: Colors.white70)),
             Text("App", style: GoogleFonts.merriweather(color: Colors.blue),),
           ],
         ),

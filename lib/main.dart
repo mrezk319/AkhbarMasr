@@ -4,6 +4,7 @@ import 'package:Akhbark/modules/homePage/home_screen.dart';
 void main() {
   runApp(MyApp());
 }
+
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
