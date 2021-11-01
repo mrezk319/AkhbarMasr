@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:session6/modules/articleView/article_view.dart';
+import 'package:Akhbark/modules/articleView/article_view.dart';
 
 class ArticleWidget extends StatelessWidget {
   const ArticleWidget(

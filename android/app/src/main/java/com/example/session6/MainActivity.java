@@ -1,4 +1,4 @@
-package com.example.session6;
+package com.example.Akhbark;
 
 import io.flutter.embedding.android.FlutterActivity;
 

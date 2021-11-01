@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:session6/modules/ArticleModel.dart';
-import 'package:session6/modules/NewsHelper.dart';
-import 'package:session6/modules/articleItem/articleWidget.dart';
+import 'package:Akhbark/models/ArticleModel.dart';
+import 'package:Akhbark/modules/NewsHelper.dart';
+import 'package:Akhbark/modules/articleItem/articleWidget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -29,6 +29,7 @@ String category = "general";
   void initState() {
     getNews(country,category);
   }
+
   fun(String category){
   loading = true;
   setState(() {
@@ -45,7 +46,7 @@ String category = "general";
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("News",style: GoogleFonts.merriweather(color: Colors.white70)),
+            Text("Akhbark",style: GoogleFonts.merriweather(color: Colors.white70)),
             Text("App",style: GoogleFonts.merriweather(color: Colors.blue),),
           ],
         ),
@@ -67,11 +68,10 @@ String category = "general";
       drawer: Drawer(
         child: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(height: 30,),
-              Center(
-                child: Text("Categories",style: GoogleFonts.allertaStencil(fontSize: 30),),
-              ),
+              Text("Categories",style: GoogleFonts.allertaStencil(fontSize: 30),),
               SizedBox(height: 20,  ),
               GestureDetector(
                 onTap: (){fun("business");Navigator.pop(context);},
@@ -121,12 +121,25 @@ class DrawerWidget extends StatelessWidget {
 final String text;final IconData icon;
   @override
   Widget build(BuildContext context) {
-    return Row(children: [
-      Icon(
-        this.icon,color: Colors.white,size: 30,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      child: Container(
+        decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(20),),
+          color: Colors.grey,
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(18.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+            Icon(
+              this.icon,color: Colors.white,size: 30,
+            ),
+            SizedBox(width: 5,),
+            Text("${this.text}",style: GoogleFonts.merriweather(fontSize: 19),)
+          ],),
+        ),
       ),
-      SizedBox(width: 5,),
-      Text("${this.text}",style: GoogleFonts.merriweather(fontSize: 19),)
-    ],);
+    );
   }
 }

@@ -1,7 +1,7 @@
 import 'dart:convert';
-import 'ArticleModel.dart';
+import '../models/ArticleModel.dart';
 import 'package:http/http.dart' as http;
-import 'package:session6/modules/ArticleModel.dart';
+import 'package:Akhbark/models/ArticleModel.dart';
 
 class News {
   List<articleModel> news = [];
